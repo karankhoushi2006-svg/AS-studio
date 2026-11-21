@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" style="color-scheme: dark;"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Studio – Wedding Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--card:#fff;--tx:#2a2420;--mu:#7a6e64;--ac:#b08a4e;--bd:#e8dfd2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16130f;--card:#201b16;--tx:#f2ece3;--mu:#a99d90;--ac:#d1ab6b;--bd:#3a322a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16130f;--card:#201b16;--tx:#f2ece3;--mu:#a99d90;--ac:#d1ab6b;--bd:#3a322a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:var(--bg);border-bottom:1px solid var(--bd)}
+nav b{font:600 24px 'Cormorant Garamond',Georgia,serif}nav a{color:var(--tx);text-decoration:none;margin-left:18px;font-size:14px}
+.hero{text-align:center;padding:12vh 5vw 9vh}.hero h1{font-size:clamp(40px,8vw,76px);line-height:1.05}.hero p{color:var(--mu);max-width:520px;margin:16px auto 28px;font-size:18px}
+.btn{display:inline-block;background:var(--ac);color:#fff;border:0;padding:12px 26px;border-radius:30px;font:500 15px Inter,sans-serif;cursor:pointer;text-decoration:none}
+.btn.o{background:none;color:var(--tx);border:1px solid var(--bd)}.btn.s{padding:6px 14px;font-size:13px}
+section{padding:60px 5vw;max-width:1150px;margin:auto}section>h2{font-size:42px;text-align:center}section>p.sub{text-align:center;color:var(--mu);margin:6px 0 34px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card.pop{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}.price{font:600 36px 'Cormorant Garamond',Georgia,serif;color:var(--ac)}
+.card ul{margin:0;padding-left:18px;color:var(--mu);flex:1}.badge{font-size:12px;color:var(--ac);text-transform:uppercase;letter-spacing:.1em}
+.gal{columns:3 220px;column-gap:14px}.gal>div{break-inside:avoid;margin-bottom:14px;position:relative;border-radius:12px;overflow:hidden;cursor:zoom-in}
+.gal img,.ph{width:100%;display:block}.ph{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:#fff;font:italic 20px 'Cormorant Garamond',Georgia,serif}
+.team .card{align-items:center;text-align:center}.team img,.team .ph{width:120px;height:120px;aspect-ratio:1;border-radius:50%;object-fit:cover;font-size:34px}
+input,textarea,select{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.form{display:grid;gap:12px;grid-template-columns:1fr 1fr}.form .w{grid-column:1/-1}@media(max-width:600px){.form{grid-template-columns:1fr}nav a{display:none}}
+.chk{display:flex;gap:8px;align-items:center;margin:4px 0}.chk input{width:auto}
+#sum{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;font-size:15px}#sum b.t{font-size:22px;color:var(--ac)}
+.adm{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--tx);color:var(--bg);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));font-size:14px}
+.edit{border:1px dashed var(--ac);border-radius:16px;padding:16px;margin-bottom:20px;display:grid;gap:8px}
+.x{position:absolute;top:8px;right:8px;background:#000a;color:#fff;border:0;border-radius:50%;width:28px;height:28px;cursor:pointer}
+footer{text-align:center;padding:50px 5vw 90px;color:var(--mu);border-top:1px solid var(--bd)}
+.lb{position:fixed;inset:0;background:#000d;z-index:20;display:flex;align-items:center;justify-content:center}.lb img{max-width:94vw;max-height:92vh}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;color:#fff;background:#1c1510 center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,#b08a4e88,transparent 50%),radial-gradient(circle at 80% 80%,#7a3b4a88,transparent 55%);animation:dr 12s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(#0006,#000b)}.hero>*{position:relative;z-index:1}.hero p{color:#e8dfd2}.hero .btn.o{color:#fff;border-color:#fff8}
+@keyframes dr{to{transform:scale(1.25) translate(3%,2%)}}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}.tabs button{border:1px solid var(--bd);background:none;color:var(--tx);padding:7px 18px;border-radius:30px;cursor:pointer;font:inherit}.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.film{position:relative;border-radius:16px;overflow:hidden;min-height:260px;display:flex;align-items:flex-end;color:#fff;text-decoration:none;background-size:cover;background-position:center}
+.film::after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 30%,#000c)}.film>div{position:relative;z-index:1;padding:20px}.film .pl{width:54px;height:54px;border-radius:50%;background:#fffd;color:#000;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px}
+.hero>.slides,.hero>.hv{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}.sl{position:absolute;inset:0;opacity:0;transition:opacity 1.6s;background-size:cover;background-position:center 30%}.sl.on{opacity:1;animation:kb 9s linear forwards}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.18)}}
+.rv{opacity:0;transform:translateY(24px);transition:.8s}.rv.in{opacity:1;transform:none}
+.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:"0" counter(s);font:600 34px 'Cormorant Garamond',Georgia,serif;color:var(--ac)}
+.wab{position:fixed;right:16px;bottom:calc(70px + env(safe-area-inset-bottom,0px));z-index:8;background:#25d366;color:#fff;border-radius:30px;padding:12px 18px;text-decoration:none;font-weight:500;box-shadow:0 4px 14px #0004}
+</style><style>artifact-sync,artifact-local{display:contents}</style></head><body>
+<div id="app"></div>
+<script id="data" type="application/json">
+{
+ "brand": "AS studio",
+ "tag": "Timeless wedding stories, told with light and emotion.",
+ "phone": "+91 8109917326",
+ "insta": "AS studio",
+ "city": "Bhopal ,Vapi ,Chhindwara",
+ "packages": [
+  {
+   "name": "Essential",
+   "tag": "Intimate weddings",
+   "price": 44999,
+   "popular": false,
+   "features": [
+    "2 photographer, 2 day",
+    "300+ edited photos",
+    "Online gallery",
+    "30 page album ",
+    "Delivery in 30 days"
+   ]
+  },
+  {
+   "name": "Signature",
+   "tag": "Most loved",
+   "price": 85000,
+   "popular": true,
+   "features": [
+    "2 photographers, 2 days",
+    "600+ edited photos",
+    "Candid + traditional coverage",
+    "Premium 40-page album",
+    "Pre-wedding mini shoot"
+   ]
+  },
+  {
+   "name": "Royal",
+   "tag": "The complete story",
+   "price": 150000,
+   "popular": false,
+   "features": [
+    "Photo + cinematic video team",
+    "All ceremonies, 3 days",
+    "1000+ edited photos",
+    "1 premium albums of 50 pages ",
+    "Drone coverage",
+    "Highlight reel"
+   ]
+  }
+ ],
+ "addons": [
+  {
+   "name": "Pre-wedding shoot",
+   "price": 25000
+  },
+  {
+   "name": "Drone coverage",
+   "price": 8000
+  },
+  {
+   "name": "Extra album( per 10 pages )",
+   "price": 10000
+  },
+  {
+   "name": "Cinematic reel - 3 to 5 ",
+   "price": 15000
+  }
+ ],
+ "team": [
+  {
+   "name": "Aadarsh suryawanshi",
+   "role": "Founder",
+   "url": ""
+  },
+  {
+   "name": "Candid Specialist",
+   "role": "Karan Khoushi",
+   "url": ""
+  },
+  {
+   "name": "Video Editor",
+   "role": "Gagan suryawanshi",
+   "url": ""
+  },
+  {
+   "name": "Nikhil Nagre",
+   "role": "Traditional photo ",
+   "url": ""
+  },
+  {
+   "name": "Kartik Satpute",
+   "role": "Traditional video",
+   "url": ""
+  }
+ ],
+ "gallery": [
+  {
+   "url": "media/p15.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p06.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p07.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p14.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p13.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p03.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p12.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p08.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p10.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p16.jpg",
+   "cap": "",
+   "cat": "Pre-wedding"
+  },
+  {
+   "url": "media/p01.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p04.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p05.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p02.jpg",
+   "cap": "",
+   "cat": "Wedding"
+  },
+  {
+   "url": "media/p09.jpg",
+   "cap": "",
+   "cat": "Haldi"
+  },
+  {
+   "url": "media/p11.jpg",
+   "cap": "",
+   "cat": "Haldi"
+  }
+ ],
+ "films": [
+  {
+   "title": "Haldi Celebration",
+   "cat": "Haldi",
+   "url": "",
+   "video": "media/v1.mp4",
+   "cover": "media/c1.jpg"
+  },
+  {
+   "title": "Haldi Day Highlights",
+   "cat": "Haldi",
+   "url": "",
+   "video": "media/v2.mp4",
+   "cover": "media/c2.jpg"
+  },
+  {
+   "title": "Engagement Highlights",
+   "cat": "Engagement",
+   "url": "",
+   "video": "media/v3.mp4",
+   "cover": "media/c3.jpg"
+  }
+ ],
+ "seed2": 1,
+ "heroVideo": "",
+ "heroUrl": ""
+}
+</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+let edit=false,owner=false,art=null,assets=null,dirty=false,gf='All';
+D.heroUrl=D.heroUrl||'';D.films=D.films||[{title:'Ankit weds Mahima',cat:'Wedding Film',url:'https://drive.google.com/file/d/1jbOt9Cq0fUaLYE0SXJg1Ajz8GexiTlS4/view',cover:''},{title:'Ankit & Mahima – Wedding Ceremony',cat:'Wedding Film',url:'https://drive.google.com/file/d/1kqXhqGWwryRra_3jPI7DNRPwIBRhba9v/view',cover:''},{title:'Haldi Ceremony',cat:'Haldi',url:'https://drive.google.com/file/d/16kQIFVoF-2fnv8Ty1NUfFzP2WYi7Q6eq/view',cover:''}];
+const sel={pkg:1,add:new Set()};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const inr=n=>'₹'+Number(n||0).toLocaleString('en-IN');
+const grad=i=>`linear-gradient(135deg,hsl(${(i*47+20)%360} 35% 55%),hsl(${(i*47+70)%360} 40% 38%))`;
+const img=(u,i,t)=>u?`<img src="${esc(u)}" alt="${esc(t)}" loading="lazy">`:`<div class="ph" style="background:${grad(i)}">${esc(t||'Photo')}</div>`;
+const S=(l,i,k,v)=>{D[l][i][k]=v;dirty=true;if(l!=='gallery')sum()};
+const F=(i,v)=>{D.packages[i].features=v.split('\n').filter(x=>x.trim());dirty=true};
+const T=(k,v)=>{D[k]=v;dirty=true};
+const add=l=>{D[l].push(l==='packages'?{name:'New Package',tag:'',price:50000,popular:false,features:['Feature']}:l==='addons'?{name:'New add-on',price:5000}:l==='team'?{name:'Name',role:'Role',url:''}:l==='films'?{title:'New film',cat:'Wedding Film',url:'',cover:''}:{url:'',cap:''});dirty=true;render()};
+const del=(l,i)=>{if(confirm('Remove this?')){D[l].splice(i,1);sel.pkg=0;sel.add.clear();dirty=true;render()}};
+if(!D.seed2){const B='/_blob/';const G=[['ff51e93aaab46497f81323b6e4a173e6','Pre-wedding'],['b30b05ea04617584b4d5f6d1fd4c382d','Wedding'],['5949f1ba4cb926699ed5ada419cd288b','Pre-wedding'],['5ada4b56afeb64a4fdce6f6c827aee0f','Pre-wedding'],['8ef805ef2dd64ee52326cf17edbce32c','Wedding'],['39d61a47a02d15de8f19e4a4ae6e664e','Wedding'],['236f203d94cea0ca7001ed97afe57a27','Pre-wedding'],['34a9714f3ecfe1d134d26391be5864b8','Pre-wedding'],['07450342c2f541bab89e00c1f74d2a3d','Pre-wedding'],['afcbf09964bd98cf42b5cbb519c04498','Pre-wedding'],['f3030859d23a0c40ed58f5f099137e89','Wedding'],['088ecafe6d952df84a041ca3e76aba76','Wedding'],['90ae9ff336c9923b06b0813670ce99ca','Wedding'],['a36a87bc28fb1ffee574a45856b07593','Wedding'],['cc741533a92f3c09ce764301331f4a74','Haldi'],['62a25a7af2578c389d205d285a442d11','Haldi']];
+D.gallery=D.gallery.filter(g=>g.url).concat(G.map(([id,cat])=>({url:B+id,cap:'',cat})));
+const FV=[['Haldi Celebration','Haldi','f5933b811cf4931065697ab7f69c5ca4','0db876e2ea2d40f4b232525688081b9c'],['Haldi Day Highlights','Haldi','3ca2bb385e7f45bdac5522f372523393','59af984471bd9bc48fcd8e63fc7fa226'],['Engagement Highlights','Engagement','f21311d2e11589c7dfdcc2c0878305d3','e5447d758819a7d8062fcdd7f75cc989']];
+D.films=D.films.filter(f=>f.video).concat(FV.map(([title,cat,v,c])=>({title,cat,url:'',video:B+v,cover:B+c})));D.seed2=1}
+D.films.forEach(f=>{if(/drive\.google/.test(f.url||''))f.url=''});
+function pv(i){const f=D.films[i];if(!f.video)return;const d=document.createElement('div');d.className='lb';d.innerHTML=`<video src="${esc(f.video)}" controls autoplay playsinline style="max-width:94vw;max-height:90vh"></video>`;d.onclick=ev=>{if(ev.target===d)d.remove()};document.body.appendChild(d)}
+function pick(multi,cb,acc){if(!assets)return alert('Uploads are unavailable right now.');const i=document.createElement('input');i.type='file';i.accept=acc||'image/*';i.multiple=multi;i.onchange=async()=>{for(const f of i.files){try{const r=await assets.upload(f);cb(r.url);dirty=true}catch(e){alert('Upload failed: '+(e.message||e))}}render()};i.click()}
+async function save(){const b=document.getElementById('sv');b.textContent='Publishing…';try{const c=document.documentElement.cloneNode(true);c.querySelector('#app').innerHTML='';c.querySelector('#data').textContent=JSON.stringify(D).replace(/</g,'\\u003c');await art.publish('<!DOCTYPE html>\n'+c.outerHTML)}catch(e){b.textContent='Save & publish';alert('Could not publish: '+(e.code||e.message||e))}}
+function sum(){const el=document.getElementById('sum');if(!el)return;const p=D.packages[sel.pkg];if(!p){el.innerHTML='Choose a package.';return}
+const ad=[...sel.add].map(i=>D.addons[i]).filter(Boolean);const tot=p.price+ad.reduce((a,x)=>a+x.price,0);
+el.innerHTML=`<div>${esc(p.name)} <span style="float:right">${inr(p.price)}</span></div>${ad.map(a=>`<div>+ ${esc(a.name)} <span style="float:right">${inr(a.price)}</span></div>`).join('')}<hr style="border:0;border-top:1px solid var(--bd)"><b class="t">Estimate: ${inr(tot)}</b><div style="color:var(--mu);font-size:13px">Final quote depends on dates, location & customisation.</div>`}
+function wa(){const g=id=>document.getElementById(id).value.trim();const p=D.packages[sel.pkg];if(!g('qn'))return alert('Please enter your name.');
+const ad=[...sel.add].map(i=>D.addons[i]?.name).filter(Boolean);const tot=(p?.price||0)+[...sel.add].reduce((a,i)=>a+(D.addons[i]?.price||0),0);
+const m=`Hi ${D.brand}! I'd like a quote.\nName: ${g('qn')}\nWedding date: ${g('qd')||'TBD'}\nVenue/City: ${g('qc')||'TBD'}\nPackage: ${p?.name}${ad.length?'\nAdd-ons: '+ad.join(', '):''}\nEstimate: ${inr(tot)}\nNotes: ${g('qm')||'-'}`;
+window.open('https://wa.me/'+D.phone.replace(/\D/g,'')+'?text='+encodeURIComponent(m),'_blank')}
+function lb(u){if(!u||edit)return;const d=document.createElement('div');d.className='lb';d.innerHTML=`<img src="${esc(u)}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d)}
+function render(){
+const e=edit,P=D.packages;
+const settings=e?`<div class="edit"><b>Site details</b><input value="${esc(D.brand)}" placeholder="Studio name" oninput="T('brand',this.value)"><input value="${esc(D.tag)}" placeholder="Tagline" oninput="T('tag',this.value)"><input value="${esc(D.phone)}" placeholder="WhatsApp number with country code, e.g. 919876543210" oninput="T('phone',this.value)"><input value="${esc(D.insta)}" placeholder="Instagram handle" oninput="T('insta',this.value)"><input value="${esc(D.city)}" placeholder="City" oninput="T('city',this.value)"><button class="btn o s" onclick="pick(false,u=>D.heroUrl=u)">Upload hero background photo</button><button class="btn o s" onclick="pick(false,u=>D.heroVideo=u,'video/*')">Upload hero video (max 20MB)</button></div>`:'';
+const pk=P.map((p,i)=>e?`<div class="card edit" style="border-style:dashed"><input value="${esc(p.name)}" oninput="S('packages',${i},'name',this.value)"><input value="${esc(p.tag)}" placeholder="Short tagline" oninput="S('packages',${i},'tag',this.value)"><input type="number" value="${p.price}" oninput="S('packages',${i},'price',+this.value)"><textarea rows="6" placeholder="One feature per line" oninput="F(${i},this.value)">${esc(p.features.join('\n'))}</textarea><label class="chk"><input type="checkbox" ${p.popular?'checked':''} onchange="S('packages',${i},'popular',this.checked)">Mark as most popular</label><button class="btn o s" onclick="del('packages',${i})">Remove package</button></div>`
+:`<div class="card ${p.popular?'pop':''}">${p.popular?'<div class="badge">Most popular</div>':`<div class="badge">${esc(p.tag)}</div>`}<h3>${esc(p.name)}</h3><div class="price">${inr(p.price)}</div><ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><a class="btn ${p.popular?'':'o'}" href="#quote" onclick="sel.pkg=${i};render();document.getElementById('quote').scrollIntoView()">Choose ${esc(p.name)}</a></div>`).join('');
+const ao=D.addons.map((a,i)=>e?`<div class="edit" style="grid-template-columns:2fr 1fr auto;display:grid"><input value="${esc(a.name)}" oninput="S('addons',${i},'name',this.value)"><input type="number" value="${a.price}" oninput="S('addons',${i},'price',+this.value)"><button class="btn o s" onclick="del('addons',${i})">✕</button></div>`:'').join('');
+const cats=['All','Wedding','Pre-wedding','Haldi','Details'];
+const ph=[D.heroUrl,...D.gallery.map(g=>g.url)].filter(Boolean).slice(0,8);
+const hv=D.heroVideo?`<video class="hv" src="${esc(D.heroVideo)}" autoplay muted loop playsinline></video>`:`<div class="slides">${ph.map((u,i)=>`<div class="sl ${i?'':'on'}" style="background-image:url(${esc(u)})"></div>`).join('')}</div>`;
+const bg=(f,i)=>{const u=f.cover||ph[i%Math.max(ph.length,1)];return u?`url(${esc(u)})`:grad(i+3)};
+const gl=D.gallery.map((g,i)=>(e||gf==='All'||(g.cat||'Wedding')===gf)?`<div class="rv" onclick="lb('${esc(g.url)}')">${img(g.url,i,g.cap)}${e?`<select onclick="event.stopPropagation()" onchange="S('gallery',${i},'cat',this.value)" style="position:absolute;left:6px;bottom:6px;width:auto">${cats.slice(1).map(c=>`<option ${(g.cat||'Wedding')===c?'selected':''}>${c}</option>`).join('')}</select><button class="x" onclick="del('gallery',${i})">✕</button>`:''}</div>`:'').join('');
+const films=D.films.map((f,i)=>e?`<div class="card edit" style="border-style:dashed"><input value="${esc(f.title)}" oninput="S('films',${i},'title',this.value)"><input value="${esc(f.cat)}" placeholder="Category" oninput="S('films',${i},'cat',this.value)"><button class="btn s" onclick="pick(false,u=>D.films[${i}].video=u,'video/*')">${f.video?'Replace video ✓':'Upload video (max 20MB)'}</button><button class="btn o s" onclick="pick(false,u=>D.films[${i}].cover=u)">Upload cover photo</button><button class="btn o s" onclick="del('films',${i})">Remove</button></div>`:`<div class="film rv" onclick="pv(${i})" style="cursor:pointer;background-image:${bg(f,i)}"><div><div class="pl">${f.video?'▶':'⏳'}</div><span class="badge">${esc(f.cat)}${f.video?'':' · coming soon'}</span><h3>${esc(f.title)}</h3></div></div>`).join('');
+const tm=D.team.map((t,i)=>e?`<div class="card edit" style="border-style:dashed">${img(t.url,i,t.name[0])}<button class="btn o s" onclick="pick(false,u=>D.team[${i}].url=u)">Upload photo</button><input value="${esc(t.name)}" oninput="S('team',${i},'name',this.value)"><input value="${esc(t.role)}" oninput="S('team',${i},'role',this.value)"><button class="btn o s" onclick="del('team',${i})">Remove</button></div>`:`<div class="card">${img(t.url,i,t.name[0])}<h3>${esc(t.name)}</h3><span style="color:var(--mu)">${esc(t.role)}</span></div>`).join('');
+document.getElementById('app').innerHTML=`
+<nav><b>${esc(D.brand)}</b><div><a href="#films">Films</a><a href="#work">Portfolio</a><a href="#packages">Packages</a><a href="#team">Team</a><a href="#quote">Get a quote</a></div></nav>
+<div class="hero" style="${D.heroUrl?`background-image:url(${esc(D.heroUrl)})`:''}">${hv}<p class="badge" style="color:#e3c48d">Wedding Photographer · ${esc(D.city)}</p><h1>${esc(D.brand)}</h1><p>${esc(D.tag)}</p><a class="btn" href="#quote">Get a quote</a> <a class="btn o" href="#work">View our work</a></div>
+${e?`<section>${settings}</section>`:''}
+<section id="films"><h2>Wedding Films</h2><p class="sub">Watch the love stories we've filmed.</p><div class="grid">${films}</div>${e?`<p style="text-align:center"><button class="btn s" onclick="add('films')">+ Add film</button></p>`:''}</section>
+<section id="work"><h2>Our Work</h2><p class="sub">Real weddings, real emotions.</p><div class="tabs">${cats.map(c=>`<button class="${gf===c?'on':''}" onclick="gf='${c}';render()">${c}</button>`).join('')}</div>${e?`<p style="text-align:center"><button class="btn s" onclick="pick(true,u=>D.gallery.push({url:u,cap:'',cat:gf==='All'?'Wedding':gf}))">+ Upload photos</button></p>`:''}<div class="gal">${gl}</div></section>
+<section id="process"><h2>How Booking Works</h2><p class="sub">Simple, stress-free and personal.</p><div class="grid steps"><div class="card rv"><h3>Share your date</h3><span>Send your wedding date and venue on WhatsApp.</span></div><div class="card rv"><h3>Pick a package</h3><span>Choose a package and add-ons, or ask for a custom plan.</span></div><div class="card rv"><h3>Lock the date</h3><span>Confirm with a booking advance and we reserve your day.</span></div><div class="card rv"><h3>We capture it</h3><span>Relax and enjoy. We deliver your photos and film.</span></div></div></section>
+<section id="packages"><h2>Packages & Pricing</h2><p class="sub">Transparent pricing. Everything can be customised.</p><div class="grid">${pk}</div>${e?`<p style="text-align:center"><button class="btn s" onclick="add('packages')">+ Add package</button></p><div style="max-width:560px;margin:auto"><b>Add-ons</b>${ao}<button class="btn o s" onclick="add('addons')">+ Add add-on</button></div>`:''}</section>
+<section id="team" class="team"><h2>Meet the Team</h2><p class="sub">The people behind the lens.</p><div class="grid">${tm}</div>${e?`<p style="text-align:center"><button class="btn s" onclick="add('team')">+ Add team member</button></p>`:''}</section>
+<section id="quote"><h2>Get Your Quote</h2><p class="sub">Pick a package, see an instant estimate, and send it to us on WhatsApp.</p>
+<div class="form" style="max-width:760px;margin:auto"><input id="qn" placeholder="Your name"><input id="qd" type="date"><input id="qc" class="w" placeholder="Venue / city"><select class="w" onchange="sel.pkg=+this.value;sum()">${P.map((p,i)=>`<option value="${i}" ${i===sel.pkg?'selected':''}>${esc(p.name)} – ${inr(p.price)}</option>`).join('')}</select>
+<div class="w">${D.addons.map((a,i)=>`<label class="chk"><input type="checkbox" ${sel.add.has(i)?'checked':''} onchange="this.checked?sel.add.add(${i}):sel.add.delete(${i});sum()">${esc(a.name)} (+${inr(a.price)})</label>`).join('')}</div>
+<textarea id="qm" class="w" rows="3" placeholder="Anything else? Ceremonies, dates, ideas…"></textarea><div id="sum" class="w"></div><button class="btn w" onclick="wa()">Send quote request on WhatsApp</button></div></section>
+<a class="wab" href="https://wa.me/${esc(D.phone.replace(/\D/g,''))}" target="_blank" rel="noopener">💬 WhatsApp</a><footer><h3>${esc(D.brand)}</h3><p>${esc(D.city)} · Instagram @${esc(D.insta)} · WhatsApp +${esc(D.phone)}</p></footer>
+${owner?`<div class="adm">${e?`<span>Editing</span><button class="btn s" id="sv" ${dirty?'':'style="opacity:.6"'} onclick="save()">Save & publish</button><button class="btn o s" style="color:var(--bg)" onclick="edit=false;render()">Preview</button>`:`<span>Owner view</span><button class="btn s" onclick="edit=true;render()">✎ Edit site</button>`}</div>`:''}`;
+sum();clearInterval(window.st);const sl=document.querySelectorAll('.sl');if(sl.length>1){let k=0;window.st=setInterval(()=>{sl[k].classList.remove('on');k=(k+1)%sl.length;sl[k].classList.add('on')},5500)}document.querySelectorAll('.rv').forEach(el=>{const io=new IntersectionObserver(([x])=>{if(x.isIntersecting){el.classList.add('in');io.disconnect()}});io.observe(el)})}
+render();
+(async()=>{try{if(!window.claude)return;const u=await claude.use('user');if(u&&u.isOwner()){owner=true;art=await claude.use('artifact');assets=await claude.use('assets');if(!art)owner=false;render()}}catch(e){}})();
+</script>
+</body></html>
